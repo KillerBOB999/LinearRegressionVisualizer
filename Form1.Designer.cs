@@ -64,6 +64,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.output_MSE = new System.Windows.Forms.Label();
             this.label_MSE = new System.Windows.Forms.Label();
+            this.button_Run = new System.Windows.Forms.Button();
+            this.button_Reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -88,6 +90,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button_Reset);
+            this.splitContainer1.Panel1.Controls.Add(this.button_Run);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
@@ -459,6 +463,26 @@
             this.label_MSE.TabIndex = 15;
             this.label_MSE.Text = "MSE";
             // 
+            // button_Run
+            // 
+            this.button_Run.Location = new System.Drawing.Point(12, 311);
+            this.button_Run.Name = "button_Run";
+            this.button_Run.Size = new System.Drawing.Size(242, 55);
+            this.button_Run.TabIndex = 2;
+            this.button_Run.Text = "Run Simulation";
+            this.button_Run.UseVisualStyleBackColor = true;
+            this.button_Run.Click += new System.EventHandler(this.button_Run_Click);
+            // 
+            // button_Reset
+            // 
+            this.button_Reset.Location = new System.Drawing.Point(12, 372);
+            this.button_Reset.Name = "button_Reset";
+            this.button_Reset.Size = new System.Drawing.Size(242, 55);
+            this.button_Reset.TabIndex = 3;
+            this.button_Reset.Text = "Reset Simulation";
+            this.button_Reset.UseVisualStyleBackColor = true;
+            this.button_Reset.Click += new System.EventHandler(this.button_Reset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,6 +558,8 @@
         private System.Windows.Forms.Label label_MSE;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label output_MSE;
+        private System.Windows.Forms.Button button_Reset;
+        private System.Windows.Forms.Button button_Run;
     }
 }
 
