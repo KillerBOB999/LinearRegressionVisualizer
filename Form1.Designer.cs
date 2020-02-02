@@ -33,6 +33,9 @@
             this.button_Reset = new System.Windows.Forms.Button();
             this.button_Run = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label_NewCalculatedLine = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.output_NewCalculatedLine = new System.Windows.Forms.Label();
             this.label_MSE = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.output_MSE = new System.Windows.Forms.Label();
@@ -45,8 +48,14 @@
             this.output_BiasError = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.output_OldCalculatedLine = new System.Windows.Forms.Label();
+            this.container = new System.Windows.Forms.Panel();
+            this.output_Epoch = new System.Windows.Forms.Label();
             this.label_Epoch = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label_PointsPerEpoch = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.input_e = new System.Windows.Forms.TextBox();
+            this.label_eEquals = new System.Windows.Forms.Label();
             this.label_GeneratedPoints = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.input_p = new System.Windows.Forms.TextBox();
@@ -65,31 +74,23 @@
             this.input_w = new System.Windows.Forms.TextBox();
             this.label_yEquals = new System.Windows.Forms.Label();
             this.label_GroundTruthLine = new System.Windows.Forms.Label();
-            this.label_PointsPerEpoch = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.input_e = new System.Windows.Forms.TextBox();
-            this.label_eEquals = new System.Windows.Forms.Label();
-            this.output_NewCalculatedLine = new System.Windows.Forms.Label();
-            this.label_NewCalculatedLine = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.output_Epoch = new System.Windows.Forms.Label();
-            this.container = new System.Windows.Forms.Panel();
+            this.button_PlayPause = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.container.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.container.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -102,6 +103,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button_PlayPause);
             this.splitContainer1.Panel1.Controls.Add(this.button_Reset);
             this.splitContainer1.Panel1.Controls.Add(this.button_Run);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
@@ -110,7 +112,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Silver;
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(800, 493);
             this.splitContainer1.SplitterDistance = 266;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -118,7 +120,7 @@
             // 
             this.button_Reset.Enabled = false;
             this.button_Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Reset.Location = new System.Drawing.Point(12, 413);
+            this.button_Reset.Location = new System.Drawing.Point(12, 448);
             this.button_Reset.Name = "button_Reset";
             this.button_Reset.Size = new System.Drawing.Size(242, 29);
             this.button_Reset.TabIndex = 3;
@@ -157,7 +159,36 @@
             this.groupBox2.Size = new System.Drawing.Size(260, 197);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Run-TIme Data";
+            this.groupBox2.Text = "Run-Time Data";
+            // 
+            // label_NewCalculatedLine
+            // 
+            this.label_NewCalculatedLine.AutoSize = true;
+            this.label_NewCalculatedLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NewCalculatedLine.Location = new System.Drawing.Point(6, 171);
+            this.label_NewCalculatedLine.Name = "label_NewCalculatedLine";
+            this.label_NewCalculatedLine.Size = new System.Drawing.Size(108, 13);
+            this.label_NewCalculatedLine.TabIndex = 17;
+            this.label_NewCalculatedLine.Text = "New Calculated Line:";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.output_NewCalculatedLine);
+            this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel10.Location = new System.Drawing.Point(111, 163);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(143, 30);
+            this.panel10.TabIndex = 16;
+            // 
+            // output_NewCalculatedLine
+            // 
+            this.output_NewCalculatedLine.AutoSize = true;
+            this.output_NewCalculatedLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output_NewCalculatedLine.Location = new System.Drawing.Point(3, 8);
+            this.output_NewCalculatedLine.Name = "output_NewCalculatedLine";
+            this.output_NewCalculatedLine.Size = new System.Drawing.Size(27, 13);
+            this.output_NewCalculatedLine.TabIndex = 1;
+            this.output_NewCalculatedLine.Text = "N/A";
             // 
             // label_MSE
             // 
@@ -275,6 +306,25 @@
             this.output_OldCalculatedLine.TabIndex = 1;
             this.output_OldCalculatedLine.Text = "N/A";
             // 
+            // container
+            // 
+            this.container.Controls.Add(this.output_Epoch);
+            this.container.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.container.Location = new System.Drawing.Point(111, 8);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(143, 30);
+            this.container.TabIndex = 5;
+            // 
+            // output_Epoch
+            // 
+            this.output_Epoch.AutoSize = true;
+            this.output_Epoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.output_Epoch.Location = new System.Drawing.Point(3, 8);
+            this.output_Epoch.Name = "output_Epoch";
+            this.output_Epoch.Size = new System.Drawing.Size(27, 13);
+            this.output_Epoch.TabIndex = 1;
+            this.output_Epoch.Text = "N/A";
+            // 
             // label_Epoch
             // 
             this.label_Epoch.AutoSize = true;
@@ -305,6 +355,48 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hyper Parameters";
             // 
+            // label_PointsPerEpoch
+            // 
+            this.label_PointsPerEpoch.AutoSize = true;
+            this.label_PointsPerEpoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PointsPerEpoch.Location = new System.Drawing.Point(6, 141);
+            this.label_PointsPerEpoch.Name = "label_PointsPerEpoch";
+            this.label_PointsPerEpoch.Size = new System.Drawing.Size(92, 13);
+            this.label_PointsPerEpoch.TabIndex = 10;
+            this.label_PointsPerEpoch.Text = "Points Per Epoch:";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.input_e);
+            this.panel9.Controls.Add(this.label_eEquals);
+            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel9.Location = new System.Drawing.Point(111, 133);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(143, 30);
+            this.panel9.TabIndex = 9;
+            // 
+            // input_e
+            // 
+            this.input_e.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.input_e.Location = new System.Drawing.Point(24, 5);
+            this.input_e.Name = "input_e";
+            this.input_e.Size = new System.Drawing.Size(116, 20);
+            this.input_e.TabIndex = 2;
+            this.input_e.Text = "20";
+            this.input_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_e.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_e.Leave += new System.EventHandler(this.textBoxDoubleCheck);
+            // 
+            // label_eEquals
+            // 
+            this.label_eEquals.AutoSize = true;
+            this.label_eEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_eEquals.Location = new System.Drawing.Point(3, 7);
+            this.label_eEquals.Name = "label_eEquals";
+            this.label_eEquals.Size = new System.Drawing.Size(22, 13);
+            this.label_eEquals.TabIndex = 1;
+            this.label_eEquals.Text = "e =";
+            // 
             // label_GeneratedPoints
             // 
             this.label_GeneratedPoints.AutoSize = true;
@@ -334,6 +426,8 @@
             this.input_p.TabIndex = 2;
             this.input_p.Text = "20";
             this.input_p.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_p.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_p.Leave += new System.EventHandler(this.textBoxDoubleCheck);
             // 
             // label_pEquals
             // 
@@ -374,6 +468,8 @@
             this.input_n.TabIndex = 2;
             this.input_n.Text = "0.1";
             this.input_n.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_n.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_n.Leave += new System.EventHandler(this.textBoxDoubleCheck);
             // 
             // label_nEquals
             // 
@@ -404,6 +500,8 @@
             this.input_r.TabIndex = 2;
             this.input_r.Text = "0.000001";
             this.input_r.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_r.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_r.Leave += new System.EventHandler(this.textBoxDoubleCheck);
             // 
             // label_rEquals
             // 
@@ -444,8 +542,10 @@
             this.input_b.Name = "input_b";
             this.input_b.Size = new System.Drawing.Size(37, 20);
             this.input_b.TabIndex = 4;
-            this.input_b.Text = "5.0";
+            this.input_b.Text = "3.0";
             this.input_b.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_b.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_b.Leave += new System.EventHandler(this.textBoxDoubleCheck);
             // 
             // label_TimesXPlus
             // 
@@ -466,6 +566,8 @@
             this.input_w.TabIndex = 2;
             this.input_w.Text = "2.0";
             this.input_w.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.input_w.TextChanged += new System.EventHandler(this.textBox_TextChanged);
+            this.input_w.Leave += new System.EventHandler(this.textBoxDoubleCheck);
             // 
             // label_yEquals
             // 
@@ -487,100 +589,24 @@
             this.label_GroundTruthLine.TabIndex = 0;
             this.label_GroundTruthLine.Text = "Ground Truth Line: ";
             // 
-            // label_PointsPerEpoch
+            // button_PlayPause
             // 
-            this.label_PointsPerEpoch.AutoSize = true;
-            this.label_PointsPerEpoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PointsPerEpoch.Location = new System.Drawing.Point(6, 141);
-            this.label_PointsPerEpoch.Name = "label_PointsPerEpoch";
-            this.label_PointsPerEpoch.Size = new System.Drawing.Size(92, 13);
-            this.label_PointsPerEpoch.TabIndex = 10;
-            this.label_PointsPerEpoch.Text = "Points Per Epoch:";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.input_e);
-            this.panel9.Controls.Add(this.label_eEquals);
-            this.panel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel9.Location = new System.Drawing.Point(111, 133);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(143, 30);
-            this.panel9.TabIndex = 9;
-            // 
-            // input_e
-            // 
-            this.input_e.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input_e.Location = new System.Drawing.Point(24, 5);
-            this.input_e.Name = "input_e";
-            this.input_e.Size = new System.Drawing.Size(116, 20);
-            this.input_e.TabIndex = 2;
-            this.input_e.Text = "20";
-            this.input_e.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label_eEquals
-            // 
-            this.label_eEquals.AutoSize = true;
-            this.label_eEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_eEquals.Location = new System.Drawing.Point(3, 7);
-            this.label_eEquals.Name = "label_eEquals";
-            this.label_eEquals.Size = new System.Drawing.Size(22, 13);
-            this.label_eEquals.TabIndex = 1;
-            this.label_eEquals.Text = "e =";
-            // 
-            // output_NewCalculatedLine
-            // 
-            this.output_NewCalculatedLine.AutoSize = true;
-            this.output_NewCalculatedLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output_NewCalculatedLine.Location = new System.Drawing.Point(3, 8);
-            this.output_NewCalculatedLine.Name = "output_NewCalculatedLine";
-            this.output_NewCalculatedLine.Size = new System.Drawing.Size(27, 13);
-            this.output_NewCalculatedLine.TabIndex = 1;
-            this.output_NewCalculatedLine.Text = "N/A";
-            // 
-            // label_NewCalculatedLine
-            // 
-            this.label_NewCalculatedLine.AutoSize = true;
-            this.label_NewCalculatedLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NewCalculatedLine.Location = new System.Drawing.Point(6, 171);
-            this.label_NewCalculatedLine.Name = "label_NewCalculatedLine";
-            this.label_NewCalculatedLine.Size = new System.Drawing.Size(108, 13);
-            this.label_NewCalculatedLine.TabIndex = 17;
-            this.label_NewCalculatedLine.Text = "New Calculated Line:";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.output_NewCalculatedLine);
-            this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel10.Location = new System.Drawing.Point(111, 163);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(143, 30);
-            this.panel10.TabIndex = 16;
-            // 
-            // output_Epoch
-            // 
-            this.output_Epoch.AutoSize = true;
-            this.output_Epoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.output_Epoch.Location = new System.Drawing.Point(3, 8);
-            this.output_Epoch.Name = "output_Epoch";
-            this.output_Epoch.Size = new System.Drawing.Size(27, 13);
-            this.output_Epoch.TabIndex = 1;
-            this.output_Epoch.Text = "N/A";
-            // 
-            // container
-            // 
-            this.container.Controls.Add(this.output_Epoch);
-            this.container.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.container.Location = new System.Drawing.Point(111, 8);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(143, 30);
-            this.container.TabIndex = 5;
+            this.button_PlayPause.Enabled = false;
+            this.button_PlayPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_PlayPause.Location = new System.Drawing.Point(12, 413);
+            this.button_PlayPause.Name = "button_PlayPause";
+            this.button_PlayPause.Size = new System.Drawing.Size(242, 29);
+            this.button_PlayPause.TabIndex = 4;
+            this.button_PlayPause.Text = "Pause Simulation";
+            this.button_PlayPause.UseVisualStyleBackColor = true;
+            this.button_PlayPause.Click += new System.EventHandler(this.button_PlayPause_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 493);
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -593,6 +619,8 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -601,8 +629,12 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.container.ResumeLayout(false);
+            this.container.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -611,12 +643,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.container.ResumeLayout(false);
-            this.container.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -668,6 +694,7 @@
         private System.Windows.Forms.Label output_NewCalculatedLine;
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Label output_Epoch;
+        private System.Windows.Forms.Button button_PlayPause;
     }
 }
 
